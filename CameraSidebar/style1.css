@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* font-family:'Oswald', sans-serif; */
+    font-family: 'Poppins', sans-serif;;
+}
+
+.main_box{
+    background:url(photo.jpg) ;
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn_one i{
+    color: rgb(249, 246, 246);
+    font-size:30px;
+    font-weight: 700px;
+    position: absolute;
+    left: 20px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.sidebar_menu{
+    position: fixed;
+    left: -300px;
+    /* we take left as a -300 becox we dont want to show the menu in sidebar
+    but when we apply animation on it then we will show it */
+    height: 100vh;
+   width: 300px;
+    /* we take the height 100vh becoz we want to show the sidebar menu complete on the screen */
+    background-color: rgb(255, 255, 255,0.1);
+    /* here 1 is the value of alpha
+    now we dont want the background color perfect
+     white so we will decrese the opacity mean the alpha value */
+     box-shadow: 0 0 6px rgb(255, 255, 255,0.5);
+     transition: all 0.5s linear;
+}
+
+.sidebar_menu .logo{
+  position: absolute;
+  width: 100%;
+  line-height: 60px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgb(255, 255, 255,0.5);
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500px;
+    
+}
+
+.sidebar_menu .menu{
+    /* color: white; */
+    position: absolute;
+    width: 100%;
+    /* if occupy the whole sidebar menu width, that's the 
+    reason why we take width as 100px; */
+
+    top: 80px;
+}
+
+.sidebar_menu .btn_two i{
+    color:gray;
+    font-size:30px;
+    font-weight: 700px;
+    position: absolute;
+    left: 270px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+
+
+.sidebar_menu .menu li{
+    margin-top: 8px;
+    padding: 16px 20px;
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+}
+
+/* .sidebar_menu .menu i,a:hover{
+    box-shadow: 0 0 4px rgb(255, 255, 255,0.5);
+} */
+
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgb(255, 255, 255,0.5);
+}
+
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    color:rgba(255,255,255);
+    opacity: 0.5;
+    position: absolute;
+    /* top: 650px; */
+    left: 30px;
+    bottom: 50px;
+}
+
+.sidebar_menu .social_media i{
+   color: white;
+   opacity: 0.8;
+   padding: 0 5px;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.3);
+ }
+
+ .btn_one i:hover{
+    font-size: 60px;
+ }
+
+ .btn_two i:hover{
+    font-size: 40px;
+ }
+
+ #check:checked ~ .sidebar_menu{
+    left: 0;
+ }
+
+ #check:checked ~ .btn_one i{
+     opacity: 0;
+ }
+
+ #check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 0.5;
+ }
